@@ -1,6 +1,11 @@
 #include <stdio.h>
 
-int hello_c() {
-  printf("Hello C\n");
-  return 0;
+char* hello_c(char* world) {
+    char* hello = "Hello";
+    
+    static char str[14];
+
+    snprintf(str, 14, "%s, %s!", hello, world);
+    
+    return str;
 }
