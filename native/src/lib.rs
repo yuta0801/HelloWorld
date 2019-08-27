@@ -3,10 +3,11 @@ extern crate neon;
 
 use neon::prelude::*;
 
-fn hello(mut cx: FunctionContext) -> JsResult<JsString> {
-    Ok(cx.string("hello node"))
+fn hello_rust(mut cx: FunctionContext) -> JsResult<JsString> {
+    println!("Hello Rust");
+    Ok(cx.string("Hello Node.js"))
 }
 
 register_module!(mut cx, {
-    cx.export_function("hello", hello)
+    cx.export_function("hello", hello_rust)
 });
