@@ -12,6 +12,6 @@
   "scripts": {
     "install": "neon build",
     "build": "neon build --release",
-    "dev": "neon build && node ."
+    "dev": "neon build && node bin"
   }
 }
