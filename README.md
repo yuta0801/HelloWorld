@@ -1,3 +1,3 @@
 # HelloWorld
 
-Hello JavaScript, Rust, C!
+Hello JavaScript, Rust, and C++!

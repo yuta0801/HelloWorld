@@ -6,7 +6,7 @@ use libc::c_char;
 use std::ffi::{CString, CStr};
 
 extern {
-    fn hello_c(world: *const c_char) -> *const c_char;
+    fn hello_cpp(world: *const c_char) -> *const c_char;
 }
 
 use neon::prelude::*;
@@ -15,7 +15,7 @@ fn hello_rust(mut cx: FunctionContext) -> JsResult<JsString> {
     let world = cx.argument::<JsString>(0)?.value();
 
     let c_arg = CString::new(world).unwrap();
-    let c_buf = unsafe { hello_c(c_arg.as_ptr()) };
+    let c_buf = unsafe { hello_cpp(c_arg.as_ptr()) };
     let c_res = unsafe { CStr::from_ptr(c_buf) };
     let hello_world = c_res.to_str().unwrap();
 

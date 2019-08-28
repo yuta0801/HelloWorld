@@ -6,6 +6,7 @@ fn main() {
 
     // add project-specific build logic here...
     cc::Build::new()
-        .file("src/lib.c")
+        .cpp(true)
+        .file("src/lib.cpp")
         .compile("lib");
 }
