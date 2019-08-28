@@ -3,6 +3,9 @@
   "version": "0.0.1",
   "description": "Hello JavaScript, Rust, C!",
   "main": "lib/index.js",
+  "bin": {
+    "hello": "bin/index.js"
+  },
   "repository": "https://github.com/yuta0801/HelloWorld",
   "author": "yuta0801 <yuta20030801@icloud.com>",
   "license": "MIT",
